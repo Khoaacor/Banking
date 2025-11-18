@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Profile</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+<body class="bg-gray-50 font-sans">
+
+<div class="flex max-h-screen w-full">
+  <!-- Sidebar -->
+  <div class="w-20 bg-gray-900 text-white flex flex-col items-center py-6">
+    <div class="mb-8">
+      <span class="text-xl font-bold bg-gradient-to-r from-purple-500 to-pink-500 p-2 rounded">HR</span>
+    </div>
+    <div class="space-y-6 flex flex-col items-center">
+      <button class="w-12 h-12 bg-gray-700 rounded-lg"><i class="bi bi-grid"></i>
+      <button class="w-12 h-12 bg-gray-700 rounded-lg"><i class="bi bi-people"></i></button>
+      <button class="w-12 h-12 bg-gray-700 rounded-lg"><i class="bi bi-file-text"></i></button>
+      <button class="w-12 h-12 bg-gray-700 rounded-lg"><i class="bi bi-gear"></i></button>
+    </div>
+    <div class="mt-auto">
+      <img src="https://i.pravatar.cc/40?img=12" alt="profile" class="rounded-full">
+    </div>
+    <form method="POST" action="">
+      <!-- @csrf     -->
+      <div>
+        <button class="w-12 h-12 rounded-lg mt-2"><i class="bi bi-door-open"></i></button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Main Content -->
+  <div class="flex-1 p-10">
+    <!-- Header -->
+    <div class="flex justify-between items-center pb-4 mb-4 border-b border-gray-300">
+      <div class="flex items-center space-x-3">
+        <a href="#" class="text-gray-600 hover:text-gray-800">
+          <i class="bi bi-arrow-left text-xl"></i>
+        </a>
+        <img
+          src="https://i.pravatar.cc/40?img=12"
+          alt="profile"
+          class="rounded-full shadow-lg"
+        >
+        <h1 class="text-2xl font-bold">Russel Sims</h1>
+      </div>      
+      <div class="flex items-center space-x-3">
+        <p class="text-sm mr-5">Added 20/11/2025</p>
+        <button class="bg-red-100 text-red-700 px-4 py-2 rounded flex items-center hover:bg-red-500 hover:text-white duration-300">
+          <i class="bi bi-trash3 mr-2"></i>         
+           Delete
+        </button>
+      </div>
+    </div>
+
+    <div class="flex space-x-10">
+      <!-- Left Panel -->
+      <div class="flex-1 bg-white shadow p-6 rounded-xl">
+        <h2 class="mb-3 text-sm text-gray-500 font-medium">PROFILE IMAGE</h2>
+        <div class="mb-6 flex flex-col items-start">
+          <img src="https://i.pravatar.cc/100?img=12" alt="profile" class="rounded-xl mb-2">
+          <button class="text-blue-500 text-sm font-medium"><i class="bi bi-image-fill"></i> Change Profile Image</button>
+        </div>
+
+        <div class="space-y-2">
+          <h2 class="mb-3 text-sm text-gray-500 font-medium">EMPLOYEE DETAILS</h2>
+          <div>
+            <label class="text-sm font-medium">Full Name</label>
+            <input type="text" value="Russel Sims" class="w-full bg-gray-50 border border-gray-200 rounded-md p-2 mt-1">
+          </div>
+          <div>
+            <label class="text-sm font-medium">Phone Number</label>
+            <input type="text" value="+1 255 29345690" class="w-full bg-gray-50 border border-gray-200 rounded-md p-2 mt-1">
+          </div>
+          <div>
+            <label class="text-sm font-medium">Email Address</label>
+            <input type="email" value="russel@mycompany.com" class="w-full bg-gray-50 border border-gray-200 rounded-md p-2 mt-1">
+          </div>
+          <div>
+            <label class="text-sm font-medium">Position</label>
+            <input type="text" value="iOS Developer" class="w-full bg-gray-50 border border-gray-200 rounded-md p-2 mt-1">
+          </div>
+        </div>
+
+        <div class="flex space-x-5 mt-6">
+          <button class="bg-gray-900 text-white px-4 py-2 rounded-md w-full">Save Changes</button>
+          <button class="bg-gray-200 px-4 py-2 rounded-md w-full">Cancel</button>
+        </div>
+      </div>
+      <div class="flex-1 bg-white p-6 rounded-xl border border-gray-700 space-y-4 shadow">
+        <h2 class="mb-3 text-sm text-gray-500 font-medium">ROLE</h2>
+        <div class="relative">
+          <label class="absolute top-3 left-3 text-[13px] font-medium text-gray-500">Role</label>
+          <select
+            class="w-full bg-[#f9fbfc] rounded-md p-2 pt-4 mt-1 border-2 border-transparent 
+                   focus:border-gray-500 outline-none transition-all">
+            <option>Employee</option>
+            <option>Manager</option>
+          </select>
+        </div>
+        <h2 class="mt-4 text-sm text-gray-500 font-medium">TEAM</h2>
+        <div class="relative">
+          <label class="absolute top-3 left-3 text-[13px] font-medium text-gray-500">HR</label>
+          <select
+            class="w-full bg-[#f9fbfc] rounded-md p-2 pt-4 mt-1 border-2 border-transparent 
+                   focus:border-gray-500 outline-none transition-all">
+            <option>Kate Middleton</option>
+          </select>
+        </div>
+        
+
+        <div class="relative">
+          <label class="absolute top-3 left-3 text-[13px] font-medium text-gray-500">Manager</label>
+          <select
+            class="w-full bg-[#f9fbfc] rounded-md p-2 pt-4 mt-1 border-2 border-transparent 
+                   focus:border-gray-500 outline-none transition-all">
+            <option>Kirk Mitrohin</option>
+          </select>
+        </div>
+
+        <div class="relative">
+          <label class="absolute top-3 left-3 text-[13px] font-medium text-gray-500">Lead</label>
+          <select
+            class="w-full bg-[#f9fbfc] rounded-md p-2 pt-4 mt-1 border-2 border-transparent 
+                   focus:border-gray-500 outline-none transition-all">
+            <option>Eugene Hummell</option>
+          </select>
+        </div>
+      </div>
+      <!-- Right Panel -->
+      <div class="flex-1 bg-white p-6 rounded-xl shadow space-y-4">
+        <h2 class="mb-2 text-sm text-gray-500 font-medium">ONBOARDING</h2>
+        <div class="relative">
+          <label class="absolute text-[13px] text-gray-500 font-medium top-3 left-2">Starts on</label>
+          <input type="date" value="2023-05-21" class="w-full bg-[#f9fbfc] text-[15px] rounded-md p-2 pt-4 mt-1">
+        </div>
+
+        <div class="flex items-center space-x-3">
+          <label class="relative flex items-center cursor-pointer">
+            <input type="checkbox" checked class="sr-only peer">
+            <div
+              class="w-8 h-[17px] bg-gray-300 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-300 rounded-full 
+                     peer dark:bg-gray-500 peer-checked:bg-blue-600 
+                     after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 
+                     after:border after:rounded-full after:h-[12px] after:w-[12px] after:transition-all 
+                     peer-checked:after:translate-x-[15px] peer-checked:after:border-white">
+            </div>
+          </label>
+          <span class="text-sm select-none">Onboarding required</span>
+        </div>
+
+        <div class="items-center justify-center">
+        <h2 class="mb-2 text-sm text-gray-500 font-medium">Current Status</h2>
+          <div class="flex gap-3 items-center">
+            <p class="text-[13px] font-medium text-gray-600 p-2 bg-[#f1fbe7] rounded-md">Onboarding</p>
+            <div class="w-[250px] flex items-center gap-2 p-2 justify-center rounded-md bg-white shadow">
+              <div class="w-[150px] bg-gray-200 rounded-full h-2 overflow-hidden">
+                <div class="bg-blue-400 h-2 rounded-full" style="width: 35%;"></div>
+              </div>
+              <p class="text-[13px] text-gray-700 font-medium flex items-center">35%</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-2">
+          <h2 class="mb-3 mt-4 text-sm text-gray-500 font-medium">Onboarding Scripts</h2>
+          <div class="space-y-5">
+            <div class="flex justify-between items-center border-b-2 pb-3 border-gray-200">
+              <label class="relative flex gap-2 items-center justify-center cursor-pointer">
+                <input type="checkbox" checked class="sr-only peer">
+                <div
+                  class="w-8 h-[17px] bg-gray-300 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-300 rounded-full 
+                         peer dark:bg-gray-500 peer-checked:bg-blue-600 
+                         after:content-[''] after:absolute after:top-[6px] after:left-[3px] after:bg-white after:border-gray-300 
+                         after:border after:rounded-full after:h-[12px] after:w-[12px] after:transition-all 
+                         peer-checked:after:translate-x-[15px] peer-checked:after:border-white">
+                </div>
+                Office Tour
+              </label>
+              <span class="text-[13.5px]">100%</span>
+            </div>
+            <div class="flex justify-between items-center border-b-2 pb-3 border-gray-200">
+              <label class="relative flex gap-2 items-center justify-center cursor-pointer">
+                <input type="checkbox" class="sr-only peer">
+                <div
+                  class="w-8 h-[17px] bg-gray-300 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-300 rounded-full 
+                         peer dark:bg-gray-500 peer-checked:bg-blue-600 
+                         after:content-[''] after:absolute after:top-[6px] after:left-[3px] after:bg-white after:border-gray-300 
+                         after:border after:rounded-full after:h-[12px] after:w-[12px] after:transition-all 
+                         peer-checked:after:translate-x-[15px] peer-checked:after:border-white">
+                </div>
+                Management Introductory
+              </label>
+            </div>
+            <div class="flex justify-between items-center border-b-2 pb-3 border-gray-200">
+              <label class="relative flex gap-2 items-center justify-center cursor-pointer">
+                <input type="checkbox" checked class="sr-only peer">
+                <div
+                  class="w-8 h-[17px] bg-gray-300 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-300 rounded-full 
+                         peer dark:bg-gray-500 peer-checked:bg-blue-600 
+                         after:content-[''] after:absolute after:top-[6px] after:left-[3px] after:bg-white after:border-gray-300 
+                         after:border after:rounded-full after:h-[12px] after:w-[12px] after:transition-all 
+                         peer-checked:after:translate-x-[15px] peer-checked:after:border-white">
+                </div>
+                Work Tools
+              </label>
+              <span class="text-[13.5px]">30%</span>
+            </div>
+            <div class="flex justify-between items-center border-b-2 pb-3 border-gray-200">
+              <label class="relative flex gap-2 items-center justify-center cursor-pointer">
+                <input type="checkbox" class="sr-only peer">
+                <div
+                  class="w-8 h-[17px] bg-gray-300 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-300 rounded-full 
+                         peer dark:bg-gray-500 peer-checked:bg-blue-600 
+                         after:content-[''] after:absolute after:top-[3px] after:left-[3px] after:bg-white after:border-gray-300 
+                         after:border after:rounded-full after:h-[12px] after:w-[12px] after:transition-all 
+                         peer-checked:after:translate-x-[15px] peer-checked:after:border-white">
+                </div>
+              </label>
+            </div>
+            <div class="flex justify-between items-center border-b-2 pb-3 border-gray-200">
+              <label class="relative flex gap-2 items-center justify-center cursor-pointer">
+                <input type="checkbox" checked class="sr-only peer">
+                <div
+                  class="w-8 h-[17px] bg-gray-300 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-300 rounded-full 
+                         peer dark:bg-gray-500 peer-checked:bg-blue-600 
+                         after:content-[''] after:absolute after:top-[6px] after:left-[3px] after:bg-white after:border-gray-300 
+                         after:border after:rounded-full after:h-[12px] after:w-[12px] after:transition-all 
+                         peer-checked:after:translate-x-[15px] peer-checked:after:border-white">
+                </div>
+                Duties Journal
+              </label>
+              <span class="text-[13.5px]">100%</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

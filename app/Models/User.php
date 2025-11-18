@@ -18,9 +18,11 @@ class User extends Authenticatable
      * @var list<string>
      */
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+        'hoten',
+        'sodt',
+        'matkhau',
+        'otp',
+        'email'
     ];
 
     /**
@@ -29,7 +31,7 @@ class User extends Authenticatable
      * @var list<string>
      */
     protected $hidden = [
-        'password',
+        'matkhau',
         'remember_token',
     ];
 
@@ -42,7 +44,15 @@ class User extends Authenticatable
     {
         return [
             'email_verified_at' => 'datetime',
-            'password' => 'hashed',
+            'matkhau' => 'hashed',
         ];
+    }
+    public function getAuthPassword()
+    {
+        return $this->matkhau;
+    }
+    public function accounts()
+    {
+        return $this->hasOne(Account::class, 'user_id', 'id')->oldestOfMany();
     }
 }

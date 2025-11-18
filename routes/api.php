@@ -3,9 +3,10 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/hello', function () {
-    return response()->json([
-        'message' => 'Hello from Laravel API!',
-        'status' => 'success'
-    ]);
-});
+use App\Http\Controllers\Api\ProductController;
+
+Route::get('/products', [ProductController::class, 'index']);
+Route::post('/products', [ProductController::class, 'store']);
+
+
+Route::get('/hello', [ProductController::class, 'hello']);
